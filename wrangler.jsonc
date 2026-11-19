@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gmedia-web",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/server.js",
+  "observability": { "enabled": true },
+  "vars": {
+    "BASE44_APP_ID": "6afe67cf229d726c00590e94",
+    "BASE44_SERVER_URL": "https://base44.app"
+  }
+}

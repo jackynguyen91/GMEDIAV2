@@ -1,0 +1,74 @@
+{
+  "name": "ServicePackage",
+  "type": "object",
+  "properties": {
+    "service_key": {
+      "type": "string",
+      "enum": [
+        "website",
+        "hosting",
+        "google_ads",
+        "facebook_ads",
+        "content",
+        "digital_marketing"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "red",
+        "pink",
+        "yellow",
+        "green"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "price_label": {
+      "type": "string"
+    },
+    "price_note": {
+      "type": "string"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "highlight": {
+      "type": "boolean",
+      "default": false
+    },
+    "sort_order": {
+      "type": "number"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "service_key",
+    "name",
+    "price_label"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

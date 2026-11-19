@@ -1,0 +1,148 @@
+{
+  "name": "Lead",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "service_interest": {
+      "type": "string",
+      "enum": [
+        "thiet-ke-website",
+        "google-ads",
+        "facebook-ads",
+        "content",
+        "digital-marketing",
+        "ssl",
+        "ten-mien-hosting",
+        "khac"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "red",
+        "yellow",
+        "green",
+        "gray",
+        "blue",
+        "gray"
+      ]
+    },
+    "package_name": {
+      "type": "string"
+    },
+    "budget_range": {
+      "type": "string",
+      "enum": [
+        "duoi-5tr",
+        "5-15tr",
+        "15-50tr",
+        "tren-50tr"
+      ],
+      "enumColors": [
+        "gray",
+        "blue",
+        "yellow",
+        "green"
+      ]
+    },
+    "domain_requested": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "contact_form",
+        "quote_form",
+        "domain_form",
+        "quick_form",
+        "apply_form",
+        "booking_form"
+      ],
+      "enumColors": [
+        "blue",
+        "green",
+        "yellow",
+        "purple",
+        "pink",
+        "red"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "quoted",
+        "won",
+        "lost"
+      ],
+      "enumColors": [
+        "blue",
+        "yellow",
+        "purple",
+        "green",
+        "red"
+      ],
+      "default": "new"
+    },
+    "internal_note": {
+      "type": "string"
+    },
+    "utm_source": {
+      "type": "string"
+    },
+    "utm_medium": {
+      "type": "string"
+    },
+    "utm_campaign": {
+      "type": "string"
+    },
+    "page_url": {
+      "type": "string"
+    },
+    "consent": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "source"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
